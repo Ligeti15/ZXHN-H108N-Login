@@ -18,8 +18,8 @@ def main():
     #group = parser.add_mutually_exclusive_group()
     parser.add_argument('-a', '--addr', help='The IP address of ZTE AP (default: 192.168.1.1)', default='192.168.1.1')
     parser.add_argument('-u', '--user',  help='Username to use (default: root)', default='root')
-    
-    parser.add_argument('-w', '--wordlist', help='The path to the worldlist', required=True)
+    requiredNamed = parser.add_argument_group('required named arguments')
+    requiredNamed.add_argument('-w', '--wordlist', help='The path to the worldlist', required=True)
     #to be added
     #parser.add_argument('-p', '--password', action='store_true', help='Password to use (default: public)', default='public')
     
