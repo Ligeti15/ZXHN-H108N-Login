@@ -26,11 +26,8 @@ def main():
     args = parser.parse_args()
 
     print 'Address: ' + args.addr
-    print 'Username: ' + args.user
-    if args.wordlist != None:
-        print 'Wordlist: ' + args.wordlist 
-    else:
-        
+    print 'Username: ' + args.user    
+    print 'Wordlist: ' + args.wordlist 
     #print 'Password: ' + args.password
 
     # Load the wordlist file
