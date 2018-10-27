@@ -19,8 +19,9 @@ def main():
     parser.add_argument('-a', '--addr', help='The IP address of ZTE AP (default: 192.168.1.1)', default='192.168.1.1')
     parser.add_argument('-u', '--user',  help='Username to use (default: root)', default='root')
     
-    parser.add_argument('-w', '--wordlist', help='The path to the worldlist')
-    parser.add_argument('-p', '--password', action='store_true', help='Password to use (default: public)', default='public')
+    parser.add_argument('-w', '--wordlist', help='The path to the worldlist', required=True)
+    #to be added
+    #parser.add_argument('-p', '--password', action='store_true', help='Password to use (default: public)', default='public')
     
     args = parser.parse_args()
 
@@ -28,7 +29,9 @@ def main():
     print 'Username: ' + args.user
     if args.wordlist != None:
         print 'Wordlist: ' + args.wordlist 
-    print 'Password: ' + args.password
+    else:
+        
+    #print 'Password: ' + args.password
 
     # Load the wordlist file
     with open(wordlist, 'r+') as f:
