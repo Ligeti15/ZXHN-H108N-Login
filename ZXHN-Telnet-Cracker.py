@@ -30,7 +30,6 @@ def main():
         print 'Wordlist: ' + args.wordlist 
     print 'Password: ' + args.password
 
-    exit()
     # Load the wordlist file
     with open(wordlist, 'r+') as f:
         # Read the file
